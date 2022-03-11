@@ -15,6 +15,13 @@ class CreateAnggotaTable extends Migration
     {
         Schema::create('anggota', function (Blueprint $table) {
             $table->id();
+
+            $table->string('kode-anggota', 5);
+            $table->string('nama-anggota', 25);
+            $table->enum('jk-anggota', ['L', 'P']);
+            $table->string('alamat-anggota', 100);
+            $table->string('no-telp-anggota', 13);
+
             $table->timestamps();
         });
     }
