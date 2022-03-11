@@ -15,6 +15,12 @@ class CreatePetugasTable extends Migration
     {
         Schema::create('petugas', function (Blueprint $table) {
             $table->id();
+
+            $table->string('nama-petugas', 25);
+            $table->string('jabatan-petugas', 15);
+            $table->enum('jk-petugas', ['L', 'P']);
+            $table->string('alamat-petugas', 100);
+            $table->string('no-telp-petugas', 13);
             
             $table->timestamps();
         });
