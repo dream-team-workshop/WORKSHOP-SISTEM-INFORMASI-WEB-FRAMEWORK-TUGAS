@@ -15,6 +15,7 @@ class CreateAnggotaTable extends Migration
     {
         Schema::create('anggota', function (Blueprint $table) {
             $table->id();
+            $
             $table->timestamps();
         });
     }
